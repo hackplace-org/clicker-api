@@ -1,0 +1,21 @@
+{
+	"name": "counter-api",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"uno": "unocss src/**/*.tsx --preflights --minify --out-file static/uno.css",
+		"dev": "concurrently 'bun run uno -- --watch' 'bun run --hot src/index.tsx'"
+	},
+	"devDependencies": {
+		"bun-types": "latest",
+		"concurrently": "^8.2.0",
+		"typed-html": "^3.0.1",
+		"unocss": "^0.55.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"hono": "^3.4.1"
+	}
+}

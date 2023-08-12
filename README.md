@@ -1,0 +1,6 @@
+# Counter API
+
+> **Important**
+> This project requires [Bun](https://bun.sh/), which in turn requires [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) on Windows.
+
+This code accompanies the _HTMX and APIs_ lesson for **hack.place()**'s EquiHacks S1 event. For a step-by-step guide on how to create this app, please reference the accompanying presentation.
