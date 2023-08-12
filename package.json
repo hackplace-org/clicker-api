@@ -1,5 +1,6 @@
 {
 	"name": "counter-api",
+	"license": "MIT",
 	"module": "index.ts",
 	"type": "module",
 	"scripts": {
