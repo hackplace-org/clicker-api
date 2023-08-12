@@ -9,7 +9,7 @@ const Root = ({ children }: elements.Children) => `
 		<head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Document</title>
+			<title>hack.place()</title>
 
 			<link href="/static/uno.css" rel="stylesheet" type="text/css" />
 			<script src="https://unpkg.com/htmx.org@1.9.4"></script>
