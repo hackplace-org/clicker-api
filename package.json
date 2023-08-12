@@ -1,7 +1,6 @@
 {
 	"name": "counter-api",
 	"license": "MIT",
-	"module": "index.ts",
 	"type": "module",
 	"scripts": {
 		"uno": "unocss src/**/*.tsx --preflights --minify --out-file static/uno.css",
