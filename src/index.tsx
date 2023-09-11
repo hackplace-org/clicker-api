@@ -1,23 +1,22 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
 
-import * as elements from "typed-html";
+import html from "@kitajs/html";
+import "@kitajs/html/htmx";
 
-const Root = ({ children }: elements.Children) => `
-	<!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>hack.place()</title>
+const Root = ({ children }: html.PropsWithChildren) => `<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>hack.place()</title>
 
-			<link href="/static/uno.css" rel="stylesheet" type="text/css" />
-			<script src="https://unpkg.com/htmx.org@1.9.4"></script>
-		</head>
+		<link href="/static/uno.css" rel="stylesheet" type="text/css" />
+		<script src="https://unpkg.com/htmx.org@1.9.4"></script>
+	</head>
 
-		${children}
-	</html>
-`;
+	${children}
+</html>`;
 
 const app = new Hono();
 app.use("/static/*", serveStatic({ root: "./" }));
