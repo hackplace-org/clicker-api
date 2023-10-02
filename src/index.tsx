@@ -29,21 +29,23 @@ app.post("/click", (c) => {
 
 app.get("/", (c) =>
 	c.html(
-		<Root>
-			<body class="h-screen bg-[#0c0a09] text-light">
-				<main class="h-full space-y-4 flex flex-col justify-center items-center">
-					<h1 class="text-6xl font-bold">Not clicked.</h1>
-					<button
-						class="px-4 py-2 rounded-lg bg-[#e11d48]"
-						hx-post="/click"
-						hx-target="previous h1"
-						hx-swap="textContent"
-					>
-						Click me!
-					</button>
-				</main>
-			</body>
-		</Root>
+		(
+			<Root>
+				<body class="h-screen bg-[#0c0a09] text-light">
+					<main class="h-full space-y-4 flex flex-col justify-center items-center">
+						<h1 class="text-6xl font-bold">Not clicked.</h1>
+						<button
+							class="px-4 py-2 rounded-lg bg-[#e11d48]"
+							hx-post="/click"
+							hx-target="previous h1"
+							hx-swap="textContent"
+						>
+							Click me!
+						</button>
+					</main>
+				</body>
+			</Root>
+		) as string
 	)
 );
 
